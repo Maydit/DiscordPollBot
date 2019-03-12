@@ -1,10 +1,14 @@
-const discord = require('discord.io');
+const Discord = require('discord.io');
 const auth = require('./auth.json');
 
 //All options
 const NONE = 0;
 const SEEN = 1;
 
+/*
+Add bot:
+https://discordapp.com/oauth2/authorize?&client_id=555173602006138890&scope=bot&permissions=67648
+*/
 
 const bot = new Discord.Client({
     token: auth.token,
