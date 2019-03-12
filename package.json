@@ -1,0 +1,15 @@
+{
+    "name": "pollbot",
+    "version": "1.0.0",
+    "description": "!pollhelp",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Maydit/DiscordPollBot"
+    },
+    "license": "MIT",
+    "main": "main.js",
+    "author": "Maydit",
+    "dependencies": {
+        "discord.io": "^2.5.3"
+    }
+}
