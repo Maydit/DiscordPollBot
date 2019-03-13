@@ -11,14 +11,18 @@ https://discordapp.com/oauth2/authorize?&client_id=555173602006138890&scope=bot&
 */
 
 const bot = new Discord.Client({
-    token: auth.token,
     autorun: true,
+    token: auth.token,
 });
 
 bot.setPresence({
     game: {
         name: "!pollhelp"
     }
+});
+
+bot.on('ready', function(event) {
+    console.log('Logged in as %s - %s\n', bot.username, bot.id);
 });
 
 bot.on('message', async function(user, userID, channelID, message, evt) {
@@ -41,7 +45,7 @@ bot.on('message', async function(user, userID, channelID, message, evt) {
         let option = NONE; // enum for option
         if(optionPos < message.length) {
             const optionStr = message.substring(optionPos);
-            if(optionStr.toLowerCase.indexOf("seen") != -1) option = SEEN;
+            if(optionStr.toLowerCase().indexOf("seen") != -1) option = SEEN;
         }
         switch (option) {
             case NONE:
