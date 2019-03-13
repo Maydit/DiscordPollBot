@@ -14,7 +14,8 @@
         "start": "node main.js"
     },
     "dependencies": {
-        "discord.io": "github:woor/discord.io#gateway_v6"
+        "discord.io": "github:woor/discord.io#gateway_v6",
+        "emoji-regex": "^8.0.0"
     },
     "devDependencies": {
         "nodemon": "^1.18.10"
